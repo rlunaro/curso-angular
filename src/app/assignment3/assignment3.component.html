@@ -2,8 +2,8 @@
 <button class="btn btn-primary" (click)="toggleSecretPassword()">Display Details</button>
 <p *ngIf="secretPasswordIsVisible">Secret password is {{mySecretPassword}}</p>
 <br/>
-<p *ngFor="let toggle of toggleHistory"
-    [ngStyle]="(toggle.number>4)?{backgroundColor: 'lightblue' }:{}"
-    [ngClass]="{'white-text': toggle.number > 4 }">I am number {{toggle.number}}</p>
+<p *ngFor="let toggle of toggleHistory; let i = index"
+    [ngStyle]="(i>4)?{backgroundColor: 'lightblue' }:{}"
+    [ngClass]="{'white-text': i > 4 }">{{toggle}}</p>
 <br/>
 <hr/>

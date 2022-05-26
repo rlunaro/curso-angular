@@ -20,7 +20,7 @@ export class Assignment3Component implements OnInit {
   public toggleSecretPassword(){
     this.secretPasswordIsVisible = !this.secretPasswordIsVisible;
     this.numberOfClicks++;
-    this.toggleHistory.push( {'date': new Date(), 'number' : this.toggleHistory.length + 1 } );
+    this.toggleHistory.push( new Date() );
   }
 
 
